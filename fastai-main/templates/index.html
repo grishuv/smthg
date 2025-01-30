@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>------</title>
+  </head>
+  <body>
+    <header class="header" id="home">
+        <div class="section__container header__container">
+          <div class="header__content">
+            <h1>WEB -<br> NAME </h1>
+            <p class="section__description">
+              Upload your CSV file to process your data with AI. Ensure your file format is correct before proceeding.
+            </p>
+            <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+                <input type="file" name="file" id="file-input" />
+                <label for="file-input">Choose File</label>
+                <button type="submit">Upload</button>
+              </form>
+          </div>
+          <div class="header__image">
+            <img src="/static/images/title.png" alt="header" />
+          </div>
+        </div>
+      </header>
+      

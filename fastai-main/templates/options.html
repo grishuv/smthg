@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/option-style.css" />
+    <title>------</title>
+  </head>
+  <body>
+    <header class="header" id="home">
+        <div class="section__container header__container">
+          <div class="header__content">
+            <h1>Choose an Option
+            </h1>
+            <p class="section__description">
+              Simplifying Onboarding to Generative AI Models.
+Upload your dataset and use the buttons below to proceed with your analysis and model training.
+            </p>
+            <form action="/display_graphs" method="post">
+              <input type="hidden" name="filepath" value="{{ filepath }}">
+              <button type="submit">Display Graphs</button>
+            </form>
+            <form action="/train_model" method="post">
+              <input type="hidden" name="filepath" value="{{ filepath }}">
+              <button type="submit">Train Linear Regression Model</button>
+            </form>
+            <form action="/rf_hyperparameters" method="get">
+              <button type="submit">Train Random Forest Model (Set Hyperparameters)</button>
+            </form>
+  
+          </div>
+          <div class="header__image">
+            <img src="/static/images/t6.png" alt="header" />
+          </div>
+        </div>
+      </header>
+      

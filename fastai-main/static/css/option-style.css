@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #8174A0;
+  --primary-color-dark: #4417529e;
+  --text-dark: #100629;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --border-radius: 2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Ensure section_container behaves correctly */
+.section_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: var(--text-dark);
+}
+
+.section__description {
+  margin-bottom: 2rem;
+  max-width: 500px;
+  font-weight: 500;
+}
+
+
+
+img {
+  display: flex;
+  width: 10%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  margin: 1rem;
+  background-color: #8174a055;
+  border-radius: var(--border-radius);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem; /* Adjust this as needed */
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+.header__content {
+  flex: 1;
+  width: 50%;
+  text-align: left;
+  padding: 2rem; /* Add space inside */
+  margin-left: 2rem; /* Add space from the left */
+}
+
+.header__image {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  animation: bounce 1s infinite alternate;
+}
+
+/* Ensure proper spacing on smaller screens */
+@media (max-width: 992px) {
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .header__content,
+  .header__image {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .header__image img {
+    max-width: 300px;
+  }
+}
+
+
+
+/* Define the bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Start position */
+  }
+  50% {
+    transform: translateY(-15px); /* Bounce up */
+  }
+  100% {
+    transform: translateY(0); /* Return to the original position */
+  }
+}
+
+/* General button styling */
+form button {
+  background-color: #441752;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 3rem; /* Rounded corners for a smooth look */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin: 0.5rem 0; /* Space between buttons */
+}
+
+form button:hover {
+  background-color: #441752;
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:focus {
+  outline: none;
+  border: 2px solid var(--primary-color-dark); /* Border on focus */
+}
+
+form button:active {
+  transform: scale(0.98); /* Slight scale effect when clicked */
+}
+
+/* Optional: If you want to style the 'submit' button differently */
+form button[type="submit"] {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+form button[type="submit"]:active {
+  transform: scale(0.98);
+}

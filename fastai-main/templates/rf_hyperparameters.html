@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/rf_hyperparameters.css" />
+    <title>Random Forest Hyperparameters</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__left">
+        <div class="content">
+          <div class="header">
+          
+            <span class="register">Random Forest Hyperparameters</span>
+          </div>
+          <div class="form__content">
+            <h3 class="form__title">Set Hyperparameters</h3>
+            <p class="form__subtitle">
+              Configure the Random Forest model hyperparameters below.
+            </p>
+            <form action="/rf_hyperparameters" method="post">
+              <label for="n_estimators">Number of Estimators:</label>
+              <input type="number" name="n_estimators" id="n_estimators" value="100" class="input__field" /><br>
+
+              <label for="max_depth">Max Depth (leave blank for default):</label>
+              <input type="text" name="max_depth" id="max_depth" class="input__field" /><br>
+
+              <label for="min_samples_split">Min Samples Split:</label>
+              <input type="number" name="min_samples_split" id="min_samples_split" value="2" class="input__field" /><br>
+
+              <label for="max_leaf_nodes">Max Leaf Nodes (leave blank for default):</label>
+              <input type="text" name="max_leaf_nodes" id="max_leaf_nodes" class="input__field" /><br>
+
+              <label for="min_samples_leaf">Min Samples Leaf:</label>
+              <input type="number" name="min_samples_leaf" id="min_samples_leaf" value="1" class="input__field" /><br>
+
+              <label for="max_features">Max Features (leave blank for default):</label>
+              <input type="text" name="max_features" id="max_features" class="input__field" /><br>
+
+              <button type="submit" class="submit__btn">Submit and Train Model</button>
+            </form>
+            <span class="bottom__line"></span>
+            <a href="/" class="footer__title">Back to Home</a>
+          </div>
+        </div>
+      </div>
+      <div class="container__right">
+        <div class="image">
+          <h3>Set Random Forest Hyperparameters</h3>
+          <p>
+            Configure the parameters to train your Random Forest model for optimal performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
