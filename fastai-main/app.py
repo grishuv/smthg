@@ -384,7 +384,9 @@ def rf_hyperparameters():
 
     return render_template('rf_hyperparameters.html')
 
-
+@app.route('/chatbot')
+def chatbot():
+    return render_template('chatbot.html')
 
 
 
